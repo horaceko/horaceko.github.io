@@ -1,1 +1,19 @@
 title: Horace
+description: Writing on software, tools, and whatever I'm thinking through.
+url: https://horaceko.github.io
+author: Horace Ko
+permalink: /:year/:title/
+
+# GitHub Pages applies the Primer theme unless told otherwise; this site has its own layouts.
+theme: null
+
+# Both plugins are on GitHub Pages' supported list.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md

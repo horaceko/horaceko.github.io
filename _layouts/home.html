@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="intro">
+  {{ content }}
+</div>
+
+{% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in years %}
+<section class="year">
+  <h2>{{ year.name }}</h2>
+  <ul class="post-list">
+    {% for post in year.items %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="post-title">{{ post.title }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d' }}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% else %}
+<p class="empty">Nothing published yet.</p>
+{% endfor %}
