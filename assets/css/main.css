@@ -36,9 +36,9 @@ a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .wrap {
-  max-width: 680px;
+  width: 100%;
   margin: 0 auto;
-  padding: 64px 24px 80px;
+  padding: 40px 20px 64px;
 }
 
 /* Header */
@@ -59,7 +59,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .intro {
   margin: 0 0 56px;
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.65;
   color: var(--body);
 }
@@ -98,7 +98,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .post-header { margin-bottom: 40px; }
 .post-header h1 {
   margin: 0 0 12px;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -107,7 +107,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .prose {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--body);
 }
@@ -208,8 +208,15 @@ sup { line-height: 0; }
 .highlight .o, .highlight .p { color: #c9d1d9; }
 .highlight .err { color: inherit; background: none; }
 
-@media (max-width: 520px) {
-  .wrap { padding-top: 40px; }
-  .post-header h1 { font-size: 28px; }
-  .prose { font-size: 18px; }
+/* Desktop: fixed-width column (720px of text) with a 16px body */
+@media (min-width: 840px) {
+  .wrap { width: 784px; max-width: none; padding: 64px 32px 80px; }
+  .intro { font-size: 16px; }
+  .post-header h1 { font-size: 34px; }
+  .prose { font-size: 16px; }
+  .prose > * { margin-bottom: 20px; }
+  .prose h2 { font-size: 20px; }
+  .prose h3 { font-size: 18px; }
+  .prose h4 { font-size: 16px; }
+  .footnotes { font-size: 14px; }
 }
