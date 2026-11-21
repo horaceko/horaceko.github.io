@@ -141,6 +141,35 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   font-style: italic;
 }
 .prose blockquote p { margin: 0; }
+
+/* Callouts, marked up like GitHub's alerts (blockquote.markdown-alert-<type>
+   with a p.markdown-alert-title) and drawn like Obsidian's: a tinted box with a
+   coloured title. Colours are Obsidian's. */
+.prose .markdown-alert {
+  --alert: 2, 122, 255;
+  margin: 24px 0;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 4px;
+  background: rgba(var(--alert), 0.1);
+  color: var(--body);
+  font-style: normal;
+}
+.prose .markdown-alert-tip { --alert: 0, 191, 188; }
+.prose .markdown-alert-important { --alert: 168, 130, 255; }
+.prose .markdown-alert-warning { --alert: 236, 117, 0; }
+.prose .markdown-alert-caution { --alert: 233, 49, 71; }
+.prose .markdown-alert p + p,
+.prose .markdown-alert .markdown-alert + p { margin-top: 12px; }
+.prose .markdown-alert .markdown-alert { margin: 12px 0 0; }
+.prose .markdown-alert .markdown-alert-title {
+  color: rgb(var(--alert));
+  font-family: var(--sans);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.prose .markdown-alert .markdown-alert-title strong { font-weight: inherit; }
+.prose .markdown-alert .markdown-alert-title + p { margin-top: 6px; }
 .prose hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
 .prose img { max-width: 100%; height: auto; }
 
