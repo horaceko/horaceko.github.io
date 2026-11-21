@@ -1,6 +1,6 @@
 /* Colours: from the Neon Dusk Omarchy theme (violet-black with a magenta accent).
    Magenta (--brand) is kept for the logo; links use a softer lavender (--accent).
-   Type: sans (Inter) for navigation and headings, serif (Source Serif 4)
+   Type: sans (Source Sans 3) for navigation and headings, serif (Source Serif 4)
    for writing, mono (JetBrains Mono) for code. */
 :root {
   --bg: #16122a;
@@ -15,7 +15,7 @@
   --code-bg: #0d0a18;
   --inline-code-bg: #252139;
 
-  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
