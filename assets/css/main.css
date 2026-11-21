@@ -52,7 +52,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   gap: 16px;
   margin-bottom: 56px;
 }
-.site-title { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; text-transform: uppercase; }
+.site-title { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
 .site-title:hover { text-decoration: none; }
 .site-title:hover span { text-decoration: underline; text-underline-offset: 3px; }
 /* Logo colour: change .site-logo color. Favicon colours live in /favicon.svg (a favicon can't read this stylesheet). */
