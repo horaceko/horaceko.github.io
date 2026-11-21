@@ -1,4 +1,5 @@
 /* Colours: from the Neon Dusk Omarchy theme (violet-black with a magenta accent).
+   The magenta is kept for the logo; links use a softer lavender.
    Type: sans (Inter) for navigation and headings, serif (Source Serif 4)
    for writing, mono (JetBrains Mono) for code. */
 :root {
@@ -9,7 +10,8 @@
   --rule: #2c283f;
   --quote-rule: #3d3950;
   --accent: #e85faf;
-  --accent-hover: #f097cb;
+  --link: #b49cf0;
+  --link-hover: #d0c2f7;
   --code-bg: #0d0a18;
   --inline-code-bg: #252139;
 
@@ -57,7 +59,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .site-logo { width: 26px; height: 26px; flex: none; color: var(--accent); }
 .site-nav { display: flex; gap: 24px; font-size: 15px; }
 .site-nav a { color: var(--muted); }
-.site-nav a.active { color: var(--accent); }
+.site-nav a.active { color: var(--link); }
 
 /* Home */
 .intro {
@@ -69,7 +71,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .intro p { margin: 0 0 16px; }
 .intro p:last-child { margin-bottom: 0; }
-.intro a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.intro a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
 .year { margin-bottom: 40px; }
 .year h2 {
   margin: 0 0 12px;
@@ -88,7 +90,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   border-bottom: 1px solid var(--rule);
 }
 .post-list a:hover { text-decoration: none; }
-.post-list a:hover .post-title { color: var(--accent); }
+.post-list a:hover .post-title { color: var(--link); }
 .post-title { font-size: 17px; font-weight: 500; }
 .post-list time {
   font-size: 14px;
@@ -118,12 +120,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .prose > * { margin: 0 0 24px; }
 .prose > :last-child { margin-bottom: 0; }
 .prose a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
-.prose a:hover { color: var(--accent-hover); }
+.prose a:hover { color: var(--link-hover); }
 .prose h2, .prose h3, .prose h4 {
   font-family: var(--sans);
   color: var(--text);
@@ -229,7 +231,7 @@ sup { line-height: 0; }
 }
 .social { display: flex; gap: 18px; }
 .social a { color: var(--muted); font-size: 17px; line-height: 1; transition: color .15s; }
-.social a:hover, .social a:focus-visible { color: var(--accent); }
+.social a:hover, .social a:focus-visible { color: var(--link); }
 
 /* Syntax highlighting (Rouge, which GitHub Pages uses by default) */
 .highlight .c, .highlight .c1, .highlight .cm, .highlight .cs { color: #968bb8; font-style: italic; }
