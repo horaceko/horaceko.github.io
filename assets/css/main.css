@@ -1,17 +1,17 @@
-/* Colours: slate background with an orange accent.
+/* Colours: from the Neon Dusk Omarchy theme (violet-black with a magenta accent).
    Type: sans (Inter) for navigation and headings, serif (Source Serif 4)
    for writing, mono (JetBrains Mono) for code. */
 :root {
-  --bg: #1d2126;
-  --text: #e3e5e8;
-  --body: #d2d6db;
-  --muted: #a0a7b0;
-  --rule: #2e333a;
-  --quote-rule: #3a4048;
-  --accent: #f0a868;
-  --accent-hover: #f6c79c;
-  --code-bg: #161a1e;
-  --inline-code-bg: #262b31;
+  --bg: #16122a;
+  --text: #f0eaff;
+  --body: #cfc7e8;
+  --muted: #968bb8;
+  --rule: #2c283f;
+  --quote-rule: #3d3950;
+  --accent: #e85faf;
+  --accent-hover: #f097cb;
+  --code-bg: #0d0a18;
+  --inline-code-bg: #252139;
 
   --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
@@ -141,33 +141,34 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .prose blockquote {
   padding-left: 20px;
   border-left: 3px solid var(--quote-rule);
-  color: #b9bfc7;
+  color: #b3a9d2;
   font-style: italic;
 }
 .prose blockquote p { margin: 0; }
 
 /* Callouts, marked up like GitHub's alerts (blockquote.markdown-alert-<type>
    with a p.markdown-alert-title) and drawn like Obsidian's: a tinted box with a
-   coloured title. Colours are Obsidian's. */
+   coloured title. Colours are from the Neon Dusk palette. */
 .prose .markdown-alert {
-  --alert: 2, 122, 255;
+  --alert: #7b8ff2;
+  --alert-bg: #222142;
   margin: 24px 0;
   padding: 12px 16px;
   border: 0;
   border-radius: 4px;
-  background: rgba(var(--alert), 0.1);
+  background: var(--alert-bg);
   color: var(--body);
   font-style: normal;
 }
-.prose .markdown-alert-tip { --alert: 0, 191, 188; }
-.prose .markdown-alert-important { --alert: 168, 130, 255; }
-.prose .markdown-alert-warning { --alert: 236, 117, 0; }
-.prose .markdown-alert-caution { --alert: 233, 49, 71; }
+.prose .markdown-alert-tip { --alert: #4be09a; --alert-bg: #1c2b37; }
+.prose .markdown-alert-important { --alert: #c77df5; --alert-bg: #2b1f42; }
+.prose .markdown-alert-warning { --alert: #eec06a; --alert-bg: #302732; }
+.prose .markdown-alert-caution { --alert: #f2596c; --alert-bg: #301b32; }
 .prose .markdown-alert p + p,
 .prose .markdown-alert .markdown-alert + p { margin-top: 12px; }
 .prose .markdown-alert .markdown-alert { margin: 12px 0 0; }
 .prose .markdown-alert .markdown-alert-title {
-  color: rgb(var(--alert));
+  color: var(--alert);
   font-family: var(--sans);
   font-size: 0.9em;
   font-weight: 600;
@@ -193,7 +194,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   font-family: var(--mono);
   font-size: 14px;
   line-height: 1.6;
-  color: #c9d1d9;
+  color: #cfc7e8;
 }
 .prose pre code { font-size: inherit; background: none; padding: 0; border-radius: 0; }
 .prose div.highlighter-rouge { margin-bottom: 24px; }
@@ -231,14 +232,14 @@ sup { line-height: 0; }
 .social a:hover, .social a:focus-visible { color: var(--accent); }
 
 /* Syntax highlighting (Rouge, which GitHub Pages uses by default) */
-.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs { color: #8b949e; font-style: italic; }
-.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kt { color: #f0a868; }
-.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sx, .highlight .si { color: #a5d6a7; }
-.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .kc { color: #9ecbff; }
-.highlight .nf, .highlight .fm { color: #e3e5e8; font-weight: 600; }
-.highlight .nc, .highlight .nn { color: #e3e5e8; }
-.highlight .na, .highlight .nt, .highlight .py { color: #9ecbff; }
-.highlight .o, .highlight .p { color: #c9d1d9; }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs { color: #968bb8; font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kt { color: #e85faf; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sx, .highlight .si { color: #4be09a; }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .kc { color: #eec06a; }
+.highlight .nf, .highlight .fm { color: #f0eaff; font-weight: 600; }
+.highlight .nc, .highlight .nn { color: #f0eaff; }
+.highlight .na, .highlight .nt, .highlight .py { color: #5cc8f5; }
+.highlight .o, .highlight .p { color: #cfc7e8; }
 .highlight .err { color: inherit; background: none; }
 
 /* Desktop: fixed-width column (720px of text) with a 16px body */
