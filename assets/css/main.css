@@ -46,11 +46,15 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 16px;
   margin-bottom: 56px;
 }
-.site-title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; text-transform: uppercase; }
+.site-title { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; text-transform: uppercase; }
+.site-title:hover { text-decoration: none; }
+.site-title:hover span { text-decoration: underline; text-underline-offset: 3px; }
+/* Logo colour: change .site-logo color. Favicon colours live in /favicon.svg (a favicon can't read this stylesheet). */
+.site-logo { width: 26px; height: 26px; flex: none; color: var(--accent); }
 .site-nav { display: flex; gap: 24px; font-size: 15px; }
 .site-nav a { color: var(--muted); }
 .site-nav a.active { color: var(--accent); }
